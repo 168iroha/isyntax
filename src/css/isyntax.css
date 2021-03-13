@@ -1,0 +1,165 @@
+/* ISyntax Style 0.9.0 */
+
+/* この中にソースコードやタイトルが入る */
+.isyntax {
+	font-family : Consolas, 'Courier New', Courier, Monaco, monospace;
+	position : relative;
+	margin-left : 2%;
+	margin-right : 2%;
+	margin-top : 5px;
+	margin-bottom : 5px;
+	line-height : 1em;
+	padding : 0;
+	z-index : 0;
+}
+
+/* 言語表示のための要素 */
+.isyntax > .language {
+	opacity : 0;
+	background : rgb(100, 150, 200);
+	color : rgb(250, 250, 250);
+	border : 1px solid rgb(100, 100, 100);
+	padding-left : 5px;
+	padding-right : 5px;
+	display : block;
+	position : absolute;
+	top : 0;
+	right : 0;
+	pointer-events : none;
+	z-index : 1;
+	transition : opacity 0.2s;
+}
+.isyntax:hover > .language {
+	opacity : 1;
+	transition : opacity 0.2s;
+}
+/* タイトル表示のための要素 */
+.isyntax > .title {
+	opacity : 0;
+	background : rgb(100, 150, 200);
+	color : rgb(250, 250, 250);
+	border : 1px solid rgb(100, 100, 100);
+	padding-left : 5px;
+	padding-right : 5px;
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	pointer-events : none;
+	z-index : 1;
+	transition : opacity 0.2s;
+}
+.isyntax:hover > .title {
+	opacity : 1;
+	transition : opacity 0.2s;
+}
+/* ソースコードを表示するための要素 */
+.isyntax > .source_code {
+	border : 1px solid rgb(45, 150, 250);
+	background : rgb(240, 240, 240);
+	overflow-y : hidden;
+	overflow-x : auto;			/* ソースコードの記述されたテーブルをスクロールする */
+	z-index : 0;
+}
+
+/* ソースコードの表示されるテーブル */
+.isyntax table {
+	position : relative;
+	margin : 0;
+	padding-left : 1%;
+	padding-right : 1%;
+	tab-size: 8;
+	-moz-tab-size: 8;
+	font-size : 100%;
+	color : rgb(0, 0, 0);
+	border-spacing : 0;
+	border-collapse : collapse;
+}
+/* ソースコード部 */
+.isyntax .code {
+	position : relative;
+	overflow : visible;
+	padding : 0;
+	margin : 0;
+	vertical-align : top;
+	word-wrap : normal;
+	white-space : pre;
+	letter-spacing : 0;
+}
+/* 各々のセルの行番号部 */
+.isyntax .line_numbers {
+	padding-top : 0;
+	padding-bottom : 0;
+	padding-left : 0.5em;
+	padding-right : 0.5em;
+	border-right : 1px solid rgb(100, 100, 100);
+	vertical-align : top;
+	text-align : right;
+	white-space : nowrap;
+	pointer-events : none;
+	letter-spacing : 0;
+}
+.isyntax .line_numbers::before {
+	content: attr(data-line_number);
+}
+/* 行のハイライト
+.isyntax .line_highlight {
+	background-color : rgba(200, 150, 100, 0.4);
+}*/
+
+/* エラーのスタイル */
+.isyntax .error {
+	color : rgb(230, 30, 30);
+}
+/* プリプロセッサのスタイル */
+.isyntax .preprocessor {
+	color : rgb(145, 145, 145);
+}
+/* 文字・文字列のスタイル */
+.isyntax .string {
+	color : rgb(145, 145, 145);
+}
+/* 数値のスタイル */
+.isyntax .numeric {
+	color : rgb(135, 140, 10);
+}
+/* 型系のスタイル */
+.isyntax .type {
+	color : rgb(45, 100, 255);
+}
+/* 制御構文型のスタイル */
+.isyntax .control {
+	color : rgb(255, 140, 250);
+}
+/* その他予約語のスタイル */
+.isyntax .keyword {
+	color : rgb(5, 50, 150);
+}
+/* 演算子のスタイル */
+.isyntax .operator {
+	color : rgb(120, 30, 30);
+}
+/* コメントのスタイル */
+.isyntax .comment {
+	color : rgb(10, 140, 75);
+}
+/* 接頭辞のスタイル */
+.isyntax .prefix {
+	color : rgb(0, 130, 130);
+}
+/* 接尾辞のスタイル */
+.isyntax .suffix {
+	color : rgb(70, 130, 180);
+}
+/* 正規表現のスタイル */
+.isyntax .regex {
+	color : rgb(210, 15, 15);
+}
+/* タグの両端のスタイル(専らHTML用) */
+.isyntax_edit .tag_ends {
+	color : rgb(100, 100, 100);
+}
+/* タグのスタイル */
+.isyntax .tag {
+	color : rgb(100, 100, 100);
+}
